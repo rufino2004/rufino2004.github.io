@@ -1,0 +1,290 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+
+header{
+    height: 75px;
+    background-color: #1a559a;
+}
+
+.cabecera{
+    width: 180px;
+    height: 70px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+.estrellas{
+    float: right;
+    width: 450px;
+    height: 75px;
+    z-index: -1000;
+}
+
+section{
+    width: 100%;
+    height: 80px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    font-family: 'Monda', sans-serif;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.nav-bar ul{
+    display: flex;
+    margin-left: 315px;
+    
+}
+
+.nav-bar ul li a{
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 50px;
+    margin-top: -50px;
+    margin-left: 45px;
+    margin-right: 5px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+.nav-bar ul li a:hover{
+    color: rgb(255, 255, 255);
+    background: #d40f0f;
+}
+
+/*MISION - VISION*/
+.container {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 40px;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.card .back .link{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.card .back .link a{
+    color: #f3f3f3;
+}
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+/*PARTE2*/
+.parte2{
+    margin-left: 65px;
+}
+.parte2 img{
+    display: block; 
+    max-width: 100%;
+    height: auto; 
+    margin-left: 190px;
+}
+
+hr {
+    border-top: 5px solid red;
+    margin: 20px;
+    width: 1180px;
+}
+
+.parte2 p {
+    max-width: 800px; 
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: 200px;
+    margin-bottom: 5px;
+}
+
+.parte2 h1 {
+    margin-left: 430px;
+    margin-top: -10px;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+.parte2 h2 {
+    margin-left: 400px;
+    font-size: 40px;
+  }
+
+@media (max-width: 768px) {
+    .parte2 p {
+      max-width: 100%;
+      font-size: 12px;
+      text-align: center;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .parte2 h1 {
+      font-size: 28px;
+      margin-left: 20px; 
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  
+    .parte2 h2 {
+      font-size: 24px;
+      margin-left: 20px; 
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .parte2 img {
+        margin-left: 20px;
+    }
+}
+
+/*FOOTER DE REDES SOCIALES*/
+
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+  }
+  .pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:5%;
+    padding: 25px 2px;
+  }
+  .pie-pagina .grupo-1 iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  .pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+  }
+  .pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+  }
+  .pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+  }
+  .pie-pagina .grupo-2 small{
+    font-size: 15px;
+  }
+
+  @media (max-width: 950px) {
+  .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:30px;
+    padding: 35px 0px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    position: relative;
+    width: 750px;
+    height: 550px;
+    margin: 40px;
+  }
+  .parte2{
+    margin-left: -120px;
+  }
+  .parte2 img{
+    display: block; 
+    max-width: 100%;
+    height: auto; 
+    margin-left: 170px;
+  } 
+}

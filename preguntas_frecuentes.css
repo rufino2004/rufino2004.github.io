@@ -1,0 +1,229 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  
+}
+
+/*ENCABEZADO*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+
+header{
+  height: 75px;
+  background-color: #1a559a;
+}
+
+.cabecera{
+  width: 180px;
+  height: 70px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+.estrellas{
+  float: right;
+  width: 380px;
+  height: 75px;
+  z-index: -1000;
+}
+
+section{
+  width: 100%;
+  height: 80px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  font-family: 'Monda', sans-serif;
+  margin-top: 10px;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.nav-bar ul{
+  display: flex;
+  margin-left: 315px;
+  
+}
+
+.nav-bar ul li a{
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 50px;
+  margin-top: -50px;
+  margin-left: 25px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+ul li{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav-bar ul li a:hover{
+  color: rgb(255, 255, 255);
+  background: #d40f0f;
+}
+
+/*FOOTER DE REDES SOCIALES*/
+
+.pie-pagina{
+  width: 100%;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:5%;
+  padding: 25px 2px;
+}
+.pie-pagina .grupo-1 iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.pie-pagina .grupo-1 .box h2{
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color: #efefef;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.pie-pagina .grupo-1 .red-social a{
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+  color: aqua;
+}
+.pie-pagina .grupo-2{
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+
+
+/* Estilos de la pregunta frecuente */
+.pf-interruptor {
+  display: none;
+}
+
+.pf__pregunta {
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #ffffff7f;
+  background-size: 300px 30px;
+  transition: transform 0.3s ease;
+  width: 90%;
+  max-width: 700px; 
+  margin: 0 auto; 
+  border-radius: 2px;
+  font-size: 18px;
+}
+
+.pf__pregunta:hover {
+  transform: scale(1.1);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.pf__respuesta {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease, opacity 1.3s ease;
+  color: azure;
+}
+
+.pf-interruptor:checked ~ .pf__pregunta ~ .pf__respuesta {
+  opacity: 1;
+  max-height: 500px;
+  background-color: rgba(17, 6, 102, 0.682);
+}
+
+/* Estilos del contenedor */
+.contenedor {
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%; 
+}
+
+/* Estilos de la caja */
+.caja {
+  padding: 30px;
+  border: 3px solid #af141400;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  background-image: url(img/pf.jpg);
+  background-color: rgba(31, 75, 163, 0.273);
+  background-size: cover; 
+  box-shadow: 10px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los elementos de la pregunta frecuente */
+.pf {
+  margin-bottom: 15px;
+  margin-left: 50px;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+}
+
+.pf__titulo {
+display: flex;
+font-weight: bold;
+color: rgb(150, 38, 38);
+margin-bottom: 15px;
+-webkit-text-stroke: 1.8px rgb(150, 38, 38);
+font-size: 50px;
+justify-content: center;
+}
+
+.caja .pf__titulo {
+  margin-top: 0;
+}
+
+@media (max-width: 950px) {
+  .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:30px;
+    padding: 35px 0px;
+  } 
+}
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+  }
+}
